@@ -1,0 +1,283 @@
+/* Impor font Inter dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1A2E4A 0%, #2A4066 100%);
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F4A261;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #F7F9FC;
+  margin-top: 10px;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error-message {
+  background-color: #E74C3C;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-in;
+}
+
+.success-message {
+  background-color: #2ECC71;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-in;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  color: #1A2E4A;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card .highlight {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2ECC71;
+}
+
+.card .account-address {
+  font-size: 1rem;
+  word-break: break-all;
+  margin-bottom: 10px;
+}
+
+.disconnect-button {
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #E74C3C;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.disconnect-button:hover {
+  background-color: #C0392B;
+  transform: scale(1.05);
+}
+
+.donation-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.donation-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 250px;
+  background-color: #F7F9FC;
+  color: #1A2E4A;
+  transition: box-shadow 0.3s ease;
+}
+
+.donation-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(244, 162, 97, 0.5);
+}
+
+.donation-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #F4A261, #E76F51);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.donation-button:hover {
+  background: linear-gradient(90deg, #E76F51, #F4A261);
+  transform: scale(1.05);
+}
+
+.connect-button {
+  display: block;
+  margin: 50px auto;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #F4A261, #E76F51);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.connect-button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #E76F51, #F4A261);
+  transform: scale(1.05);
+}
+
+.connect-button:disabled {
+  background: #7F8C8D;
+  cursor: not-allowed;
+}
+
+.transaction-history {
+  background-color: #FFFFFF;
+  color: #1A2E4A;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.transaction-history h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.no-transactions {
+  text-align: center;
+  color: #7F8C8D;
+  font-size: 1.1rem;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tx-table th,
+.tx-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ECF0F1;
+}
+
+.tx-table th {
+  font-weight: 600;
+  background-color: #F7F9FC;
+}
+
+.tx-table td {
+  font-size: 0.95rem;
+}
+
+.tx-link {
+  color: #F4A261;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tx-link:hover {
+  color: #E76F51;
+  text-decoration: underline;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donation-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .donation-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tx-table th,
+  .tx-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
